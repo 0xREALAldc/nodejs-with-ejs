@@ -6,11 +6,11 @@ app.set("view engine", "ejs");// `view engine` is where we tell express what eng
 
 //after we're going to create the routes and we set what is that they will show 
 app.get("/", function (req, res) {
-  res.render("index"); // res : the response to the user, and we will render the page.
+  res.render("pages/index"); // res : the response to the user, and we will render the page.
 })
 
 app.get("/about", function (req, res) {
-  res.render("about");
+  res.render("pages/about");
 })
 
 //in the end we're going to get our serve running in a port
