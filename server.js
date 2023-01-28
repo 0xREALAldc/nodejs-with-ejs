@@ -6,7 +6,39 @@ app.set("view engine", "ejs");// `view engine` is where we tell express what eng
 
 //after we're going to create the routes and we set what is that they will show 
 app.get("/", function (req, res) {
-  res.render("pages/index"); // res : the response to the user, and we will render the page.
+  const items = [
+    {
+      title: "D",
+      message: 'Build  applications/services in an easy way'
+    },
+    {
+      title: "E",
+      message: 'EJS use JavaScript to render HTML'
+    },
+    {
+      title: "M",
+      message: 'Easy to use'
+    },
+    {
+      title: "A",
+      message: 'Greate starter point'
+    },
+    {
+      title: "I",
+      message: 'npm install ejs'
+    },
+    {
+      title: "S",
+      message: 'easy syntax'
+    },
+  ];
+
+  const subtitle = "A modeling language to develpo HTML pages using JS"
+  
+  res.render("pages/index", { 
+    qualities: items,
+    subtitle
+   }); // res : the response to the user, and we will render the page.
 })
 
 app.get("/about", function (req, res) {
